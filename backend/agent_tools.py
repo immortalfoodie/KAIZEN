@@ -53,9 +53,10 @@ def evaluate_via_governance(
         },
     }
 
+    from config import settings
     try:
         resp = httpx.post(
-            "http://localhost:8000/api/v1/evaluate-action",
+            f"http://localhost:{settings.PORT}/api/v1/evaluate-action",
             json=payload,
             timeout=10.0,
         )
