@@ -326,13 +326,3 @@ Contributions are welcome! Please open an issue or submit a pull request.
 3. Commit your changes: `git commit -m 'feat: add my feature'`
 4. Push to the branch: `git push origin feature/my-feature`
 5. Open a Pull Request
-
----
-
-<div align="center">
-
-*Netra — Because rogue AI shouldn't be an option.*
-
-**Netra** • Continuous AI Governance
-
-</div>
