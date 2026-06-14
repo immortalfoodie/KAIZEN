@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #E8A0BF;
+  --color-accent: #D4A853;
+  --color-success: #7EC8A0;
+  --color-warning: #E6A923;
+  --color-danger: #D94040;
+  --color-surface: #161B22;
+  --color-surface-elevated: #1C2333;
+  --color-charcoal: #C9D1D9;
+  --color-background: #0D1117;
+  --color-border-glow: rgba(212, 168, 83, 0.15);
+}
+
+/* ── Base Styles ─────────────────────────────────────────── */
+body {
+  background-color: var(--color-background);
+  color: var(--color-charcoal);
+  font-family: 'Outfit', 'Noto Sans JP', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* Subtle asanoha pattern overlay on body */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z' fill='none' stroke='%23D4A853' stroke-width='0.5'/%3E%3Cpath d='M30 0L30 60M0 30L60 30' fill='none' stroke='%23D4A853' stroke-width='0.3'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+
+/* ── Glassmorphism Card ──────────────────────────────────── */
+.kaizen-card {
+  background: rgba(22, 27, 34, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 168, 83, 0.12);
+  border-radius: 12px;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.kaizen-card:hover {
+  border-color: rgba(212, 168, 83, 0.25);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(212, 168, 83, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.kaizen-btn {
+  background: rgba(22, 27, 34, 0.9);
+  border: 1px solid rgba(212, 168, 83, 0.2);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+}
+
+.kaizen-btn:hover {
+  background: rgba(28, 35, 51, 0.95);
+  border-color: rgba(212, 168, 83, 0.4);
+  box-shadow: 0 0 12px rgba(212, 168, 83, 0.1);
+  transform: translateY(-1px);
+}
+
+.kaizen-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.kaizen-button {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.05em;
+}
+
+.kaizen-button:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+.kaizen-button:active {
+  transform: translateY(0);
+}
+
+/* ── Badge ───────────────────────────────────────────────── */
+.kaizen-badge {
+  border: 1px solid rgba(212, 168, 83, 0.3);
+  border-radius: 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  backdrop-filter: blur(8px);
+}
+
+/* ── Headings: Outfit / Noto Sans JP ─────────────────────── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Outfit', 'Noto Sans JP', system-ui, sans-serif;
+  font-weight: 700;
+  color: #E6EDF3;
+}
+
+/* ── Mono text ───────────────────────────────────────────── */
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── Scrollbar — Gold Zen ────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 168, 83, 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 168, 83, 0.45);
+}
+
+/* ── Selection — Sakura ──────────────────────────────────── */
+::selection {
+  background-color: rgba(232, 160, 191, 0.35);
+  color: white;
+}
+
+/* ── Ensō animation (Zen circle) ─────────────────────────── */
+@keyframes enso-draw {
+  0% {
+    stroke-dashoffset: 565;
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.3;
+  }
+}
+
+@keyframes ink-drop {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.6;
+  }
+
+  90% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 4px rgba(212, 168, 83, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 0 16px rgba(212, 168, 83, 0.2);
+  }
+}
+
+@keyframes scan-line {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* ── Utility: Glow borders ───────────────────────────────── */
+.glow-sakura {
+  box-shadow: 0 0 15px rgba(232, 160, 191, 0.15), inset 0 0 15px rgba(232, 160, 191, 0.05);
+}
+
+.glow-gold {
+  box-shadow: 0 0 15px rgba(212, 168, 83, 0.15), inset 0 0 15px rgba(212, 168, 83, 0.05);
+}
+
+.glow-success {
+  box-shadow: 0 0 15px rgba(126, 200, 160, 0.15);
+}
+
+.glow-danger {
+  box-shadow: 0 0 15px rgba(217, 64, 64, 0.15);
+}
+
+.glow-warning {
+  box-shadow: 0 0 15px rgba(230, 169, 35, 0.15);
+}
