@@ -9,7 +9,7 @@ Written in pure Python to bypass LangChain/Pydantic v1 bugs on Python 3.14.
 import os
 import json
 import logging
-import requests
+import httpx
 from datetime import datetime
 
 logger = logging.getLogger(__name__)
@@ -54,10 +54,10 @@ def evaluate_via_governance(
     }
 
     try:
-        resp = requests.post(
+        resp = httpx.post(
             "http://localhost:8000/api/v1/evaluate-action",
             json=payload,
-            timeout=10,
+            timeout=10.0,
         )
         if resp.status_code == 200:
             result = resp.json()
