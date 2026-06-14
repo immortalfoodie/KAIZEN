@@ -54,12 +54,29 @@ def evaluate_via_governance(
     }
 
     from config import settings
+    # Try the configured port first, fallback to 8000, using 127.0.0.1 to avoid loopback/IPv6 resolution issues
+    ports_to_try = [settings.PORT]
+    if settings.PORT != 8000:
+        ports_to_try.append(8000)
+
+    resp = None
+    last_err = None
+    for port in ports_to_try:
+        try:
+            resp = httpx.post(
+                f"http://127.0.0.1:{port}/api/v1/evaluate-action",
+                json=payload,
+                timeout=5.0,
+            )
+            break
+        except Exception as e:
+            last_err = e
+            continue
+
+    if resp is None:
+        raise GovernanceException(f"🛑 BLOCKED (fail-closed) — Governance system unreachable: {last_err}")
+
     try:
-        resp = httpx.post(
-            f"http://localhost:{settings.PORT}/api/v1/evaluate-action",
-            json=payload,
-            timeout=10.0,
-        )
         if resp.status_code == 200:
             result = resp.json()
             decision = result.get("decision")
