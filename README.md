@@ -314,15 +314,3 @@ Netra/
 | `GET` | `/api/v1/memory-insights` | Query customer fraud history |
 | `GET` | `/api/v1/rules` | List all active governance rules |
 | `GET` | `/api/v1/health` | Service health check |
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request.
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/my-feature`
-3. Commit your changes: `git commit -m 'feat: add my feature'`
-4. Push to the branch: `git push origin feature/my-feature`
-5. Open a Pull Request
