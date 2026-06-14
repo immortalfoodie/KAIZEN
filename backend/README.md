@@ -1,4 +1,4 @@
-# Agent Conscience — Backend
+# Netra — Backend
 
 AI Governance Middleware: an invisible observability layer that intercepts AI agent actions in real-time, validates them through 3 pillars (Rules Engine, Memory Validator, Risk Scorer), and returns a decision: **APPROVE**, **BLOCK**, or **ESCALATE**.
 

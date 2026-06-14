@@ -1,5 +1,5 @@
 """
-Agent Conscience — Rules Engine (Pillar 1)
+Netra — Rules Engine (Pillar 1)
 Deterministic policy evaluation against configurable business rules
 """
 

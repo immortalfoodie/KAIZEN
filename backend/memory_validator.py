@@ -1,5 +1,5 @@
 """
-Agent Conscience — Memory Validator (Pillar 2)
+Netra — Memory Validator (Pillar 2)
 ChromaDB-based historical pattern matching for organizational memory
 """
 

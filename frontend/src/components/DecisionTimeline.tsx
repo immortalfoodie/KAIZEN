@@ -40,7 +40,7 @@ export function DecisionTimeline({ logs }: DecisionTimelineProps) {
   };
 
   return (
-    <div className="kaizen-card p-4 h-full flex flex-col">
+    <div className="netra-card p-4 h-full flex flex-col">
       <h2 className="text-base font-bold pb-2 mb-3 border-b border-accent/15 flex items-center gap-2">
         {t("decision_log")}
         <span className="text-[10px] text-charcoal/30 font-normal">監査</span>

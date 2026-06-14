@@ -71,7 +71,7 @@ export function DecisionPipeline({ currentDecision }: DecisionPipelineProps) {
   ];
 
   return (
-    <div className="kaizen-card p-6 flex flex-col h-full relative overflow-hidden">
+    <div className="netra-card p-6 flex flex-col h-full relative overflow-hidden">
       {/* Decorative kanji watermark */}
       <span className="kanji-watermark right-4 top-4 text-[7rem] opacity-[0.02]">判</span>
 

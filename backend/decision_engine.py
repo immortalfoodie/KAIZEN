@@ -1,5 +1,5 @@
 """
-Agent Conscience — Decision Engine
+Netra — Decision Engine
 Orchestrator: Rules → Memory → Risk → Final Decision
 """
 

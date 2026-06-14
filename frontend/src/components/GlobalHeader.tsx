@@ -40,7 +40,7 @@ export function Sidebar({
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `kaizen_brief_${new Date().toISOString().slice(0, 10)}.pdf`;
+      a.download = `netra_brief_${new Date().toISOString().slice(0, 10)}.pdf`;
       document.body.appendChild(a);
       a.click();
       a.remove();
@@ -54,7 +54,7 @@ export function Sidebar({
     <>
       {/* Mobile Top Header (hidden on desktop) */}
       <header className="lg:hidden w-full bg-surface-elevated/80 border-b border-accent/15 px-4 py-3 flex items-center justify-between shrink-0 relative z-30 backdrop-blur-xl">
-        <span className="kanji-watermark -left-2 -top-4 text-[4rem]">改善</span>
+        <span className="kanji-watermark -left-2 -top-4 text-[4rem]">Netra</span>
         <div className="flex items-center gap-2">
           <div className="w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
           <span className="text-base font-black tracking-wider text-gradient-gold font-mono">{t("app_name")}</span>
@@ -85,7 +85,7 @@ export function Sidebar({
         <div className="lg:hidden fixed inset-0 top-[53px] bg-background/95 backdrop-blur-xl z-20 flex flex-col p-6 border-b border-accent/15 gap-4 overflow-y-auto">
           <button
             onClick={() => { onMemoryTrigger(); setMobileMenuOpen(false); }}
-            className="kaizen-btn flex items-center gap-3 text-sm px-4 py-3 text-charcoal w-full"
+            className="netra-btn flex items-center gap-3 text-sm px-4 py-3 text-charcoal w-full"
           >
             <Database size={16} className="text-primary" />
             <span>{t("memory_vault")}</span>
@@ -93,7 +93,7 @@ export function Sidebar({
 
           <button
             onClick={() => { onInboxTrigger(); setMobileMenuOpen(false); }}
-            className="kaizen-btn flex items-center gap-3 text-sm px-4 py-3 text-charcoal w-full relative"
+            className="netra-btn flex items-center gap-3 text-sm px-4 py-3 text-charcoal w-full relative"
           >
             <Inbox size={16} className="text-warning" />
             <span>{t("queue")}</span>
@@ -106,7 +106,7 @@ export function Sidebar({
 
           <button
             onClick={() => { downloadCIOBrief(); setMobileMenuOpen(false); }}
-            className="kaizen-btn flex items-center gap-3 text-sm px-4 py-3 text-charcoal w-full"
+            className="netra-btn flex items-center gap-3 text-sm px-4 py-3 text-charcoal w-full"
           >
             <FileText size={16} className="text-success" />
             <span>{t("cio_brief")}</span>
@@ -115,7 +115,7 @@ export function Sidebar({
           <div className="flex gap-2 w-full mt-2">
             <button
               onClick={toggleVoice}
-              className={`kaizen-btn flex-1 flex items-center justify-center gap-2 text-xs py-2.5 ${voiceOn ? "border-accent/40 bg-accent/10" : "text-charcoal/50"}`}
+              className={`netra-btn flex-1 flex items-center justify-center gap-2 text-xs py-2.5 ${voiceOn ? "border-accent/40 bg-accent/10" : "text-charcoal/50"}`}
             >
               {voiceOn ? <Volume2 size={16} className="text-accent" /> : <VolumeX size={16} />}
               <span>{voiceOn ? t("voice_on") : t("voice_off")}</span>
@@ -125,7 +125,7 @@ export function Sidebar({
             <div className="relative flex-1">
               <button
                 onClick={() => setLangOpen(!langOpen)}
-                className="kaizen-btn w-full flex items-center justify-center gap-2 text-xs py-2.5 text-charcoal"
+                className="netra-btn w-full flex items-center justify-center gap-2 text-xs py-2.5 text-charcoal"
               >
                 <Globe size={16} className="text-accent" />
                 <span>Lang</span>
@@ -149,7 +149,7 @@ export function Sidebar({
 
           <button
             onClick={() => { onDemoTrigger(); setMobileMenuOpen(false); }}
-            className="kaizen-button bg-gradient-to-r from-danger to-danger/80 text-white w-full py-3 flex items-center justify-center gap-2 text-sm mt-4"
+            className="netra-button bg-gradient-to-r from-danger to-danger/80 text-white w-full py-3 flex items-center justify-center gap-2 text-sm mt-4"
           >
             <ShieldAlert size={16} />
             <span>{t("rogue_demo")}</span>
@@ -161,7 +161,7 @@ export function Sidebar({
       <aside className={`hidden lg:flex bg-surface-elevated/40 border-r border-accent/15 flex-col shrink-0 z-20 backdrop-blur-xl h-screen relative sticky top-0 justify-between transition-all duration-300 ${isCollapsed ? "w-20 px-3 py-4" : "w-64 p-6"}`}>
         {/* Kanji watermark */}
         {!isCollapsed && (
-          <span className="kanji-watermark -left-4 -top-6 text-[7rem] opacity-[0.02] select-none pointer-events-none">改善</span>
+          <span className="kanji-watermark -left-4 -top-6 text-[7rem] opacity-[0.02] select-none pointer-events-none">Netra</span>
         )}
 
         <div className="flex flex-col gap-6 relative z-10 w-full">
@@ -231,7 +231,7 @@ export function Sidebar({
           <nav className="flex flex-col gap-2.5">
             <button
               onClick={onMemoryTrigger}
-              className={`kaizen-btn flex items-center text-charcoal w-full hover:text-white cursor-pointer hover:border-primary/40 ${isCollapsed ? "justify-center p-3" : "gap-3 text-xs px-3.5 py-3 justify-start"}`}
+              className={`netra-btn flex items-center text-charcoal w-full hover:text-white cursor-pointer hover:border-primary/40 ${isCollapsed ? "justify-center p-3" : "gap-3 text-xs px-3.5 py-3 justify-start"}`}
               title={isCollapsed ? t("memory_vault") : ""}
             >
               <Database size={isCollapsed ? 16 : 14} className="text-primary shrink-0" />
@@ -240,7 +240,7 @@ export function Sidebar({
 
             <button
               onClick={onInboxTrigger}
-              className={`kaizen-btn flex items-center text-charcoal w-full hover:text-white relative cursor-pointer hover:border-warning/40 ${isCollapsed ? "justify-center p-3" : "gap-3 text-xs px-3.5 py-3 justify-start"}`}
+              className={`netra-btn flex items-center text-charcoal w-full hover:text-white relative cursor-pointer hover:border-warning/40 ${isCollapsed ? "justify-center p-3" : "gap-3 text-xs px-3.5 py-3 justify-start"}`}
               title={isCollapsed ? t("queue") : ""}
             >
               <Inbox size={isCollapsed ? 16 : 14} className="text-warning shrink-0" />
@@ -254,7 +254,7 @@ export function Sidebar({
 
             <button
               onClick={downloadCIOBrief}
-              className={`kaizen-btn flex items-center text-charcoal w-full hover:text-white cursor-pointer hover:border-success/40 ${isCollapsed ? "justify-center p-3" : "gap-3 text-xs px-3.5 py-3 justify-start"}`}
+              className={`netra-btn flex items-center text-charcoal w-full hover:text-white cursor-pointer hover:border-success/40 ${isCollapsed ? "justify-center p-3" : "gap-3 text-xs px-3.5 py-3 justify-start"}`}
               title={isCollapsed ? t("cio_brief") : ""}
             >
               <FileText size={isCollapsed ? 16 : 14} className="text-success shrink-0" />
@@ -276,7 +276,7 @@ export function Sidebar({
               <span className="text-[10px] font-mono text-charcoal/40">VOICE_NARRATION:</span>
               <button
                 onClick={toggleVoice}
-                className={`kaizen-btn p-2 rounded-lg cursor-pointer ${voiceOn ? "border-accent/40 bg-accent/15" : "text-charcoal/40"}`}
+                className={`netra-btn p-2 rounded-lg cursor-pointer ${voiceOn ? "border-accent/40 bg-accent/15" : "text-charcoal/40"}`}
                 title={voiceOn ? t("voice_on") : t("voice_off")}
               >
                 {voiceOn ? <Volume2 size={15} className="text-accent" /> : <VolumeX size={15} className="text-charcoal/40" />}
@@ -285,7 +285,7 @@ export function Sidebar({
           ) : (
             <button
               onClick={toggleVoice}
-              className={`kaizen-btn p-3 rounded-lg cursor-pointer flex justify-center w-full ${voiceOn ? "border-accent/40 bg-accent/15" : "text-charcoal/40"}`}
+              className={`netra-btn p-3 rounded-lg cursor-pointer flex justify-center w-full ${voiceOn ? "border-accent/40 bg-accent/15" : "text-charcoal/40"}`}
               title={voiceOn ? t("voice_on") : t("voice_off")}
             >
               {voiceOn ? <Volume2 size={16} className="text-accent" /> : <VolumeX size={16} className="text-charcoal/40" />}
@@ -297,7 +297,7 @@ export function Sidebar({
             {!isCollapsed ? (
               <button
                 onClick={() => setLangOpen(!langOpen)}
-                className="kaizen-btn flex items-center justify-between text-xs px-3.5 py-2.5 text-charcoal w-full cursor-pointer"
+                className="netra-btn flex items-center justify-between text-xs px-3.5 py-2.5 text-charcoal w-full cursor-pointer"
               >
                 <span className="flex items-center gap-2">
                   <Globe size={14} className="text-accent" />
@@ -308,7 +308,7 @@ export function Sidebar({
             ) : (
               <button
                 onClick={() => setLangOpen(!langOpen)}
-                className="kaizen-btn flex items-center justify-center p-3 text-charcoal w-full cursor-pointer"
+                className="netra-btn flex items-center justify-center p-3 text-charcoal w-full cursor-pointer"
                 title="Language"
               >
                 <Globe size={16} className="text-accent" />
@@ -332,7 +332,7 @@ export function Sidebar({
           {/* Rogue Agent Demo Trigger */}
           <button
             onClick={onDemoTrigger}
-            className={`kaizen-button bg-gradient-to-r from-danger to-danger/80 hover:from-danger hover:to-danger/75 text-white py-3 flex items-center justify-center gap-2 font-bold shadow-lg shadow-danger/10 border-danger/30 ${isCollapsed ? "p-3 w-full" : "text-xs px-3.5"}`}
+            className={`netra-button bg-gradient-to-r from-danger to-danger/80 hover:from-danger hover:to-danger/75 text-white py-3 flex items-center justify-center gap-2 font-bold shadow-lg shadow-danger/10 border-danger/30 ${isCollapsed ? "p-3 w-full" : "text-xs px-3.5"}`}
             title={isCollapsed ? t("rogue_demo") : ""}
           >
             <ShieldAlert size={isCollapsed ? 16 : 14} />
@@ -342,7 +342,7 @@ export function Sidebar({
           {/* Version banner */}
           {!isCollapsed && (
             <div className="text-center text-[9px] font-mono text-charcoal/30">
-              KAIZEN v1.2.0 • CONTINUOUS AI GOVERNANCE
+              Netra v1.2.0 • CONTINUOUS AI GOVERNANCE
             </div>
           )}
         </div>

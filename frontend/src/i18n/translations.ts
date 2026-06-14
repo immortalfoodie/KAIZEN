@@ -1,5 +1,5 @@
 /**
- * KAIZEN i18n Translation System
+ * Netra i18n Translation System
  * Lightweight, zero-dependency internationalization.
  */
 
@@ -104,7 +104,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     customer_id: "Customer ID",
     action_type: "Action Type",
     what_if_title: "What-If Playground",
-    what_if_desc: "Test any scenario — adjust the parameters and see what KAIZEN would do.",
+    what_if_desc: "Test any scenario — adjust the parameters and see what Netra would do.",
     live_agent: "Live AI Agent",
     manual_scenarios: "Manual Scenarios",
     safe_action: "SAFE ACTION",
@@ -154,7 +154,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     customer_id: "顧客ID",
     action_type: "アクション種別",
     what_if_title: "仮想シミュレーション",
-    what_if_desc: "パラメータを調整して、KAIZENの判定をテストしてください。",
+    what_if_desc: "パラメータを調整して、Netraの判定をテストしてください。",
     live_agent: "ライブAIエージェント",
     manual_scenarios: "手動シナリオ",
     safe_action: "安全なアクション",
@@ -204,7 +204,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     customer_id: "ग्राहक ID",
     action_type: "कार्रवाई प्रकार",
     what_if_title: "क्या-अगर खेल का मैदान",
-    what_if_desc: "किसी भी परिदृश्य का परीक्षण करें — पैरामीटर समायोजित करें और देखें KAIZEN क्या करेगा।",
+    what_if_desc: "किसी भी परिदृश्य का परीक्षण करें — पैरामीटर समायोजित करें और देखें Netra क्या करेगा।",
     live_agent: "लाइव AI एजेंट",
     manual_scenarios: "मैन्युअल परिदृश्य",
     safe_action: "सुरक्षित कार्य",
@@ -254,7 +254,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     customer_id: "ID de Cliente",
     action_type: "Tipo de Acción",
     what_if_title: "Laboratorio ¿Qué Pasaría Si?",
-    what_if_desc: "Prueba cualquier escenario — ajusta los parámetros y observa qué haría KAIZEN.",
+    what_if_desc: "Prueba cualquier escenario — ajusta los parámetros y observa qué haría Netra.",
     live_agent: "Agente IA en Vivo",
     manual_scenarios: "Escenarios Manuales",
     safe_action: "ACCIÓN SEGURA",
@@ -304,7 +304,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     customer_id: "ग्राहक ओळखपत्र",
     action_type: "कृती प्रकार",
     what_if_title: "काय-जर खेळाचे मैदान",
-    what_if_desc: "कोणत्याही परिस्थितीची चाचणी घ्या - मापदंड समायोजित करा आणि KAIZEN काय करेल ते पहा.",
+    what_if_desc: "कोणत्याही परिस्थितीची चाचणी घ्या - मापदंड समायोजित करा आणि Netra काय करेल ते पहा.",
     live_agent: "थेट AI एजंट",
     manual_scenarios: "मॅन्युअल परिस्थिती",
     safe_action: "सुरक्षित कृती",

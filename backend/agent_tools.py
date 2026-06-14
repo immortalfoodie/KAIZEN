@@ -1,5 +1,5 @@
 """
-Agent Conscience — Real Agent Tools with Governance Interception
+Netra — Real Agent Tools with Governance Interception
 Tools that perform REAL actions (file writes, DB queries) but are
 intercepted by the governance pipeline before execution.
 
@@ -67,7 +67,7 @@ def evaluate_via_governance(
 
             if decision == "BLOCK":
                 raise GovernanceException(
-                    f"🛑 BLOCKED by Agent Conscience | Risk Score: {risk_score}/100 | Reason: {reasoning}"
+                    f"🛑 BLOCKED by Netra | Risk Score: {risk_score}/100 | Reason: {reasoning}"
                 )
 
             return result

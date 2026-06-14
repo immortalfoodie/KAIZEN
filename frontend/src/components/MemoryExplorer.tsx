@@ -65,10 +65,10 @@ export function MemoryExplorer({ onClose }: { onClose: () => void }) {
                   value={customerId}
                   onChange={(e) => setCustomerId(e.target.value)}
                   placeholder="e.g. cust_789"
-                  className="kaizen-input flex-1 text-xs"
+                  className="netra-input flex-1 text-xs"
                   onKeyDown={(e) => e.key === "Enter" && fetchInsight(customerId)}
                 />
-                <button onClick={() => fetchInsight(customerId)} className="kaizen-button bg-gradient-to-r from-primary to-primary/70 text-white p-3 flex items-center justify-center rounded-lg">
+                <button onClick={() => fetchInsight(customerId)} className="netra-button bg-gradient-to-r from-primary to-primary/70 text-white p-3 flex items-center justify-center rounded-lg">
                   <Search size={18} />
                 </button>
             </div>
@@ -163,7 +163,7 @@ export function MemoryExplorer({ onClose }: { onClose: () => void }) {
                     setCustomerId("cust_789");
                     fetchInsight("cust_789");
                   }}
-                  className="w-full text-left kaizen-btn p-3 flex items-center justify-between group"
+                  className="w-full text-left netra-btn p-3 flex items-center justify-between group"
                 >
                   <div>
                     <div className="font-bold text-sm group-hover:text-primary transition-colors text-white/80">cust_789</div>
@@ -177,7 +177,7 @@ export function MemoryExplorer({ onClose }: { onClose: () => void }) {
                     setCustomerId("cust_123");
                     fetchInsight("cust_123");
                   }}
-                  className="w-full text-left kaizen-btn p-3 flex items-center justify-between group"
+                  className="w-full text-left netra-btn p-3 flex items-center justify-between group"
                 >
                   <div>
                     <div className="font-bold text-sm group-hover:text-primary transition-colors text-white/80">cust_123</div>
@@ -191,7 +191,7 @@ export function MemoryExplorer({ onClose }: { onClose: () => void }) {
                     setCustomerId("cust_456");
                     fetchInsight("cust_456");
                   }}
-                  className="w-full text-left kaizen-btn p-3 flex items-center justify-between group"
+                  className="w-full text-left netra-btn p-3 flex items-center justify-between group"
                 >
                   <div>
                     <div className="font-bold text-sm group-hover:text-danger transition-colors text-white/80">cust_456</div>

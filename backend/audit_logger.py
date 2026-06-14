@@ -1,5 +1,5 @@
 """
-Agent Conscience — Audit Logger
+Netra — Audit Logger
 Persistent audit trail for all governance decisions
 """
 

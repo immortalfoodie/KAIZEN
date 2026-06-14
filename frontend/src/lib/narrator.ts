@@ -1,5 +1,5 @@
 /**
- * KAIZEN Voice Narrator
+ * Netra Voice Narrator
  * Uses the browser's free SpeechSynthesis API to announce BLOCK events aloud.
  * Zero dependencies, zero cost.
  */
@@ -39,27 +39,27 @@ export function narrateDecision(decision: {
   let text = "";
   if (decision.decision === "BLOCK") {
     if (lang === "ja") {
-      text = `警告！KAIZENが${decision.agent_name}による${amountText}の不審な${decision.action_type}をブロックしました。リスクスコアは100点中${Math.round(decision.risk_score)}点です。`;
+      text = `警告！Netraが${decision.agent_name}による${amountText}の不審な${decision.action_type}をブロックしました。リスクスコアは100点中${Math.round(decision.risk_score)}点です。`;
     } else if (lang === "hi") {
-      text = `अलर्ट! KAIZEN ने ${decision.agent_name} द्वारा ${amountText} की संदिग्ध ${decision.action_type} को रोक दिया है। जोखिम स्कोर 100 में से ${Math.round(decision.risk_score)} है।`;
+      text = `अलर्ट! Netra ने ${decision.agent_name} द्वारा ${amountText} की संदिग्ध ${decision.action_type} को रोक दिया है। जोखिम स्कोर 100 में से ${Math.round(decision.risk_score)} है।`;
     } else if (lang === "mr") {
-      text = `सावधान! KAIZEN ने ${decision.agent_name} द्वारे ${amountText} ची संशयास्पद ${decision.action_type} थांबवली आहे. जोखीम स्कोअर 100 पैकी ${Math.round(decision.risk_score)} आहे.`;
+      text = `सावधान! Netra ने ${decision.agent_name} द्वारे ${amountText} ची संशयास्पद ${decision.action_type} थांबवली आहे. जोखीम स्कोअर 100 पैकी ${Math.round(decision.risk_score)} आहे.`;
     } else if (lang === "es") {
-      text = `¡Alerta! KAIZEN ha bloqueado ${decision.action_type} sospechoso de ${amountText} por ${decision.agent_name}. Puntaje de riesgo: ${Math.round(decision.risk_score)} de 100.`;
+      text = `¡Alerta! Netra ha bloqueado ${decision.action_type} sospechoso de ${amountText} por ${decision.agent_name}. Puntaje de riesgo: ${Math.round(decision.risk_score)} de 100.`;
     } else {
-      text = `Alert! KAIZEN has blocked a suspicious ${decision.action_type} of ${amountText} by ${decision.agent_name}. Risk score: ${Math.round(decision.risk_score)} out of 100. The action has been halted.`;
+      text = `Alert! Netra has blocked a suspicious ${decision.action_type} of ${amountText} by ${decision.agent_name}. Risk score: ${Math.round(decision.risk_score)} out of 100. The action has been halted.`;
     }
   } else if (decision.decision === "ESCALATE") {
     if (lang === "ja") {
-      text = `警告。KAIZENが${amountText}の${decision.action_type}を人間のレビューにエスカレーションしました。リスクスコアは${Math.round(decision.risk_score)}点です。`;
+      text = `警告。Netraが${amountText}の${decision.action_type}を人間のレビューにエスカレーションしました。リスクスコアは${Math.round(decision.risk_score)}点です。`;
     } else if (lang === "hi") {
-      text = `चेतावनी! KAIZEN ने मानव समीक्षा के लिए ${amountText} की ${decision.action_type} को एस्केलेट किया है। जोखिम स्कोर ${Math.round(decision.risk_score)} है।`;
+      text = `चेतावनी! Netra ने मानव समीक्षा के लिए ${amountText} की ${decision.action_type} को एस्केलेट किया है। जोखिम स्कोर ${Math.round(decision.risk_score)} है।`;
     } else if (lang === "mr") {
-      text = `चेतावणी! KAIZEN ने मानवी पुनरावलोकनासाठी ${amountText} ची ${decision.action_type} वाढवली आहे. जोखीम स्कोअर ${Math.round(decision.risk_score)} आहे.`;
+      text = `चेतावणी! Netra ने मानवी पुनरावलोकनासाठी ${amountText} ची ${decision.action_type} वाढवली आहे. जोखीम स्कोअर ${Math.round(decision.risk_score)} आहे.`;
     } else if (lang === "es") {
-      text = `Advertencia. KAIZEN ha reportado ${decision.action_type} de ${amountText} para revisión humana. Puntaje de riesgo: ${Math.round(decision.risk_score)} de 100.`;
+      text = `Advertencia. Netra ha reportado ${decision.action_type} de ${amountText} para revisión humana. Puntaje de riesgo: ${Math.round(decision.risk_score)} de 100.`;
     } else {
-      text = `Warning. KAIZEN has flagged a ${decision.action_type} of ${amountText} for human review. Risk score: ${Math.round(decision.risk_score)} out of 100.`;
+      text = `Warning. Netra has flagged a ${decision.action_type} of ${amountText} for human review. Risk score: ${Math.round(decision.risk_score)} out of 100.`;
     }
   }
 

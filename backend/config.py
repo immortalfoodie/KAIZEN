@@ -1,5 +1,5 @@
 """
-Agent Conscience — Configuration
+Netra — Configuration
 Loads settings from environment / .env file
 """
 
@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     """Application settings loaded from environment variables or .env file."""
 
     # ── Application ──────────────────────────────────────────────────────
-    APP_NAME: str = "NETRA"
+    APP_NAME: str = "Netra"
     APP_VERSION: str = "1.0.0"
     ENVIRONMENT: str = "development"
     LOG_LEVEL: str = "INFO"

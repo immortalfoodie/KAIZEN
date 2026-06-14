@@ -35,7 +35,7 @@ async def send_discord_alert(action: AgentAction, result: DecisionResult):
         color_word = "BLOCKED" if result.decision == "BLOCK" else "ESCALATED"
 
         message = (
-            f"{emoji} **NETRA Alert** {emoji}\n"
+            f"{emoji} **Netra Alert** {emoji}\n"
             f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
             f"**Agent**: {action.agent_name}\n"
             f"**Action**: {action.action_type} ₹{action.amount:,.0f}\n"

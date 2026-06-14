@@ -56,7 +56,7 @@ export function AgentRadar() {
   };
 
   return (
-    <div className="kaizen-card p-5 flex flex-col h-full relative overflow-hidden">
+    <div className="netra-card p-5 flex flex-col h-full relative overflow-hidden">
       {/* Decorative kanji */}
       <span className="kanji-watermark right-2 bottom-2 text-[5rem] opacity-[0.02]">監</span>
 
@@ -65,7 +65,7 @@ export function AgentRadar() {
           {t("agent_radar")}
           <span className="text-[10px] text-charcoal/30 font-normal">エージェント</span>
         </span>
-        <span className="kaizen-badge bg-primary/15 text-primary border-primary/30">{MOCK_AGENTS.length} {t("active")}</span>
+        <span className="netra-badge bg-primary/15 text-primary border-primary/30">{MOCK_AGENTS.length} {t("active")}</span>
       </h2>
 
       <div className="flex-1 overflow-y-auto pr-1 space-y-3 relative z-10">

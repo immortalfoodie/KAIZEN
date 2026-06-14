@@ -1,5 +1,5 @@
 """
-Agent Conscience — Main Application
+Netra — Main Application
 FastAPI server with all routers, CORS, and lifecycle management
 """
 
@@ -87,7 +87,7 @@ async def lifespan(app: FastAPI):
     yield
 
     # ── Shutdown ────────────────────────────────────────────────────────
-    logger.info("Shutting down Agent Conscience...")
+    logger.info("Shutting down Netra...")
 
 
 # ── Create FastAPI app ───────────────────────────────────────────────────────

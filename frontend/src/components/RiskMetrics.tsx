@@ -106,7 +106,7 @@ export function RiskMetrics({ metrics, recentLogs }: RiskMetricsProps) {
   };
 
   return (
-    <div className="kaizen-card p-5 flex flex-col h-full relative overflow-y-auto">
+    <div className="netra-card p-5 flex flex-col h-full relative overflow-y-auto">
       {/* Decorative kanji */}
       <span className="kanji-watermark right-2 bottom-2 text-[5rem] opacity-[0.02]">危</span>
 
@@ -406,7 +406,7 @@ export function RiskMetrics({ metrics, recentLogs }: RiskMetricsProps) {
                   </p>
                   <p className="font-bold text-charcoal/90 mt-4">Why it matters:</p>
                   <p>
-                    Shows the sheer volume of AI-driven actions that KAIZEN has audited in real-time. This confirms the interceptor is successfully placed between your agents and your external tools.
+                    Shows the sheer volume of AI-driven actions that Netra has audited in real-time. This confirms the interceptor is successfully placed between your agents and your external tools.
                   </p>
                 </div>
               )}
@@ -434,7 +434,7 @@ export function RiskMetrics({ metrics, recentLogs }: RiskMetricsProps) {
             <div className="mt-4 pt-3 border-t border-accent/15">
               <button
                 onClick={() => setExplainingMetric(null)}
-                className="w-full kaizen-button bg-gradient-to-r from-accent/80 to-accent/60 text-background py-2 font-bold text-sm rounded-lg"
+                className="w-full netra-button bg-gradient-to-r from-accent/80 to-accent/60 text-background py-2 font-bold text-sm rounded-lg"
               >
                 GOT IT
               </button>

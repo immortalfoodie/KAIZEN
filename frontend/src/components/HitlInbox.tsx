@@ -39,7 +39,7 @@ export function HitlInbox({
               </span>
             )}
           </div>
-          <button onClick={onClose} className="kaizen-button bg-background/20 hover:bg-background/30 text-background px-3 py-1 text-xs font-bold rounded-lg">CLOSE</button>
+          <button onClick={onClose} className="netra-button bg-background/20 hover:bg-background/30 text-background px-3 py-1 text-xs font-bold rounded-lg">CLOSE</button>
         </div>
 
         <div className="p-6 overflow-y-auto bg-surface-elevated/50 flex-1 space-y-4">
@@ -74,13 +74,13 @@ export function HitlInbox({
                     <div className="flex items-center gap-3 mt-4 pt-4 border-t border-white/5">
                       <button 
                         onClick={() => onResolve(esc.action_id)}
-                        className="kaizen-button bg-gradient-to-r from-success to-success/70 text-white flex-1 py-2.5 flex items-center justify-center gap-2 rounded-lg text-xs"
+                        className="netra-button bg-gradient-to-r from-success to-success/70 text-white flex-1 py-2.5 flex items-center justify-center gap-2 rounded-lg text-xs"
                       >
                         <CheckCircle size={16} /> APPROVE ACTION
                       </button>
                       <button 
                         onClick={() => onResolve(esc.action_id)}
-                        className="kaizen-button bg-gradient-to-r from-danger to-danger/70 text-white flex-[0.5] py-2.5 flex items-center justify-center gap-2 rounded-lg text-xs"
+                        className="netra-button bg-gradient-to-r from-danger to-danger/70 text-white flex-[0.5] py-2.5 flex items-center justify-center gap-2 rounded-lg text-xs"
                       >
                         <XCircle size={16} /> REJECT
                       </button>

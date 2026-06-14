@@ -127,7 +127,7 @@ export function RogueAgentSimulator({ onClose }: RogueAgentSimulatorProps) {
 
   return (
     <div className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50 p-4">
-      <div className="kaizen-card bg-surface w-full max-w-3xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col border-accent/15">
+      <div className="netra-card bg-surface w-full max-w-3xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col border-accent/15">
         {/* Header with torii-red accent */}
         <div className="torii-bar" />
         <div className="bg-gradient-to-r from-danger/90 to-danger/70 text-white p-4 flex items-center justify-between shrink-0">
@@ -160,7 +160,7 @@ export function RogueAgentSimulator({ onClose }: RogueAgentSimulatorProps) {
         <div className="p-6 overflow-y-auto flex-1">
           <p className="text-charcoal/40 mb-4 text-xs">
             Select a scenario to launch an autonomous AI Agent. Its actions will be intercepted and evaluated live by the
-            KAIZEN governance layer.
+            Netra governance layer.
           </p>
 
           {/* ── Live Agent Tab ──────────────────────────────────────── */}
@@ -177,14 +177,14 @@ export function RogueAgentSimulator({ onClose }: RogueAgentSimulatorProps) {
               </div>
               <p className="text-xs text-charcoal/50 mb-3">
                 Launch a <strong className="text-charcoal/70">real AI agent</strong> powered by Groq
-                llama-3.3-70b-versatile. The agent autonomously decides to use tools — and KAIZEN
+                llama-3.3-70b-versatile. The agent autonomously decides to use tools — and Netra
                 intercepts each tool call in real-time.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 <button
                   disabled={agentRunning}
                   onClick={() => runLiveAgent("dangerous_refund")}
-                  className="kaizen-button bg-gradient-to-br from-danger to-danger/70 text-white p-3 text-left rounded-lg disabled:opacity-50"
+                  className="netra-button bg-gradient-to-br from-danger to-danger/70 text-white p-3 text-left rounded-lg disabled:opacity-50"
                 >
                   <div className="font-bold text-xs flex items-center gap-2">
                     <Zap size={12} /> DANGEROUS
@@ -196,7 +196,7 @@ export function RogueAgentSimulator({ onClose }: RogueAgentSimulatorProps) {
                 <button
                   disabled={agentRunning}
                   onClick={() => runLiveAgent("fraud_refund")}
-                  className="kaizen-button bg-gradient-to-br from-warning to-warning/70 text-background p-3 text-left rounded-lg disabled:opacity-50"
+                  className="netra-button bg-gradient-to-br from-warning to-warning/70 text-background p-3 text-left rounded-lg disabled:opacity-50"
                 >
                   <div className="font-bold text-xs flex items-center gap-2">
                     <Zap size={12} /> FRAUD TARGET
@@ -206,7 +206,7 @@ export function RogueAgentSimulator({ onClose }: RogueAgentSimulatorProps) {
                 <button
                   disabled={agentRunning}
                   onClick={() => runLiveAgent("safe_refund")}
-                  className="kaizen-button bg-gradient-to-br from-success to-success/70 text-white p-3 text-left rounded-lg disabled:opacity-50"
+                  className="netra-button bg-gradient-to-br from-success to-success/70 text-white p-3 text-left rounded-lg disabled:opacity-50"
                 >
                   <div className="font-bold text-xs flex items-center gap-2">
                     <Play size={12} /> SAFE
@@ -262,7 +262,7 @@ export function RogueAgentSimulator({ onClose }: RogueAgentSimulatorProps) {
               <button
                 disabled={loading}
                 onClick={() => simulateAction("refund", 500, "cust_clean_123")}
-                className="kaizen-btn p-4 text-left group border-white/5 hover:border-success/20"
+                className="netra-btn p-4 text-left group border-white/5 hover:border-success/20"
               >
                 <div className="font-bold text-success text-xs mb-1 flex items-center justify-between">
                   {t("safe_action")}
@@ -279,7 +279,7 @@ export function RogueAgentSimulator({ onClose }: RogueAgentSimulatorProps) {
               <button
                 disabled={loading}
                 onClick={() => simulateAction("refund", 15000, "cust_789")}
-                className="kaizen-btn p-4 text-left group border-white/5 hover:border-warning/20"
+                className="netra-btn p-4 text-left group border-white/5 hover:border-warning/20"
               >
                 <div className="font-bold text-warning text-xs mb-1 flex items-center justify-between">
                   {t("suspicious_action")}
@@ -296,7 +296,7 @@ export function RogueAgentSimulator({ onClose }: RogueAgentSimulatorProps) {
               <button
                 disabled={loading}
                 onClick={() => simulateAction("refund", 75000, "cust_456")}
-                className="kaizen-btn p-4 text-left group border-warning/15 bg-warning/5 hover:border-warning/30"
+                className="netra-btn p-4 text-left group border-warning/15 bg-warning/5 hover:border-warning/30"
               >
                 <div className="font-bold text-danger text-xs mb-1 flex items-center justify-between">
                   {t("fraud_historical")}
@@ -319,7 +319,7 @@ export function RogueAgentSimulator({ onClose }: RogueAgentSimulatorProps) {
                     "hacker_99"
                   )
                 }
-                className="kaizen-btn p-4 text-left group bg-danger/10 border-danger/20 hover:border-danger/40"
+                className="netra-btn p-4 text-left group bg-danger/10 border-danger/20 hover:border-danger/40"
               >
                 <div className="font-bold text-danger text-xs mb-1 flex items-center justify-between">
                   {t("critical_breach")}
@@ -354,7 +354,7 @@ export function RogueAgentSimulator({ onClose }: RogueAgentSimulatorProps) {
                   <select
                     value={wifAction}
                     onChange={(e) => setWifAction(e.target.value)}
-                    className="kaizen-select w-full text-xs"
+                    className="netra-select w-full text-xs"
                   >
                     <option value="refund">Refund</option>
                     <option value="transfer">Transfer</option>
@@ -369,7 +369,7 @@ export function RogueAgentSimulator({ onClose }: RogueAgentSimulatorProps) {
                     type="number"
                     value={wifAmount}
                     onChange={(e) => setWifAmount(e.target.value)}
-                    className="kaizen-input w-full text-xs"
+                    className="netra-input w-full text-xs"
                     placeholder="50000"
                   />
                 </div>
@@ -379,7 +379,7 @@ export function RogueAgentSimulator({ onClose }: RogueAgentSimulatorProps) {
                     type="text"
                     value={wifCustomer}
                     onChange={(e) => setWifCustomer(e.target.value)}
-                    className="kaizen-input w-full text-xs"
+                    className="netra-input w-full text-xs"
                     placeholder="cust_test_123"
                   />
                 </div>
@@ -388,7 +388,7 @@ export function RogueAgentSimulator({ onClose }: RogueAgentSimulatorProps) {
                   <select
                     value={wifTier}
                     onChange={(e) => setWifTier(e.target.value)}
-                    className="kaizen-select w-full text-xs"
+                    className="netra-select w-full text-xs"
                   >
                     <option value="bronze">Bronze</option>
                     <option value="silver">Silver</option>
@@ -400,7 +400,7 @@ export function RogueAgentSimulator({ onClose }: RogueAgentSimulatorProps) {
               <button
                 disabled={wifLoading}
                 onClick={runWhatIf}
-                className="kaizen-button bg-gradient-to-r from-accent to-accent/70 text-background px-6 py-2.5 w-full flex items-center justify-center gap-2 rounded-lg text-sm disabled:opacity-50"
+                className="netra-button bg-gradient-to-r from-accent to-accent/70 text-background px-6 py-2.5 w-full flex items-center justify-center gap-2 rounded-lg text-sm disabled:opacity-50"
               >
                 <FlaskConical size={14} />
                 {wifLoading ? t("waiting") : t("run_scenario")}

@@ -1,5 +1,5 @@
 """
-Agent Conscience — Pydantic Models
+Netra — Pydantic Models
 Request/response schemas for all API endpoints
 """
 

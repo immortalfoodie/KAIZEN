@@ -1,5 +1,5 @@
 """
-Agent Conscience — Risk Scorer (Pillar 3)
+Netra — Risk Scorer (Pillar 3)
 Isolation Forest anomaly detection + weighted score combination
 """
 

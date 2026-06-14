@@ -51,7 +51,7 @@ async def _event_generator(queue: asyncio.Queue):
         # Send initial connection event
         connect_event = {
             "event": "connected",
-            "data": {"message": "Connected to NETRA event stream"},
+            "data": {"message": "Connected to Netra event stream"},
             "timestamp": datetime.utcnow().isoformat() + "Z",
         }
         yield f"event: connected\ndata: {json.dumps(connect_event)}\n\n"

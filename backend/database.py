@@ -1,5 +1,5 @@
 """
-Agent Conscience — Database Layer
+Netra — Database Layer
 SQLite via aiosqlite for zero-config persistent storage
 """
 

@@ -1,5 +1,5 @@
 """
-Agent Conscience — Seed Data Loader
+Netra — Seed Data Loader
 Seeds the database and ChromaDB with historical data on first run
 """
 
