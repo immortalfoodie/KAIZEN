@@ -22,6 +22,9 @@ twilio>=9.0.4
 # Groq SDK (for live agent simulation)
 groq>=0.9.0
 
+# PDF Generation (CIO Brief)
+fpdf2>=2.8.0
+
 # Testing
 pytest>=8.3.0
 pytest-asyncio>=0.23.0
