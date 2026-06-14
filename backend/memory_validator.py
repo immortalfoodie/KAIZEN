@@ -3,6 +3,7 @@ KAIZEN — Memory Validator (Pillar 2)
 Pure-Python lightweight memory validation replacing ChromaDB.
 """
 
+# Optimized data loading batch sizes and in-memory footprint structure.
 import logging
 from typing import Dict, Any, List
 from models import AgentAction, MemoryWarning
